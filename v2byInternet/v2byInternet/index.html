@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Visualisations | An Example</title>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+    <meta charset="UTF-8">
+    <title>Density Data Map</title>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <h1>互联网的发展</h1>
+            <p>描述.</p>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="vis1"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="vis2"  class="vis-container"></div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="vis11"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="vis21"  class="vis-container"></div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="vis12"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="vis22"  class="vis-container"></div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <div class="description description-left">
+                <h2>总结</h2>
+                <p>结果看出</p>
+            </div>
+        </div>
+        <div class="pure-u-1-1">
+            <div id="vis5"  class="vis-container"></div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis3"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+            <div id="vis31"  class="vis-container"></div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis4"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+            <div id="vis41"  class="vis-container"></div>
+        </div>
+    </div>
+
+
+
+</div> <!-- end page -->
+
+<script type="text/javascript">
+    var specVis1 = "js/internet_1.vg.json";
+    var specVis11 = "js/internet_1_1.vg.json";
+    var specVis12 = "js/internet_1_2.vg.json";
+    var specVis2 = "js/internet_2.vg.json";
+    var specVis21 = "js/internet_2_1.vg.json";
+    var specVis22 = "js/internet_2_2.vg.json";
+    var specVis3 = "js/internet_3.vg.json";
+    var specVis31 = "js/internet_3_1.vg.json";
+    var specVis4 = "js/internet_4.vg.json";
+    var specVis41 = "js/internet_4_1.vg.json";
+    var specVis5 = "js/internet_5.vg.json";
+
+    vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis11', specVis11, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis12', specVis12, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis21', specVis21, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis22', specVis22, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    // vegaEmbed('#vis31', specVis31, {"actions": false}).then(function(result) {
+    //     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    // }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    // vegaEmbed('#vis41', specVis41, {"actions": false}).then(function(result) {
+    //     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    // }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+
+</script>
+</body>
+</html>
