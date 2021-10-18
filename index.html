@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Visualisations </title>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+    <meta charset="UTF-8">
+    <title>Density Data Map</title>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <h1>The useage of Interent trend</h1>
+            <p>Visualization</p>
+        </div>
+    </div>
+    <article>
+        <h2>The Interent Useage Development in The Word</h2>
+        <p><strong>The history of the Internet can be traced back decades-e-mail has existed since the 1960s, file sharing has been around since at least the 1970s, and TCP/IP was standardized in 1982. But the birth of the World Wide Web in 1989 completely changed our history of communication</strong></p>
+        
+    </article>
+
+        <div class="pure-g">
+        <div class="pure-u-1-1">
+            <div class="description description-left">
+                <h2>Overall</h2>
+                <p>In order to have a deeper understanding of the Internet trends in the world, this visualization is divided into 4 satuations for analysis (percentage of total population fixed broadband subscriptions, the mobile cellular subscriptions per 100 people, the number of internet users per country, and the percentage of individuals using the Internet)</p>
+            <p>We can see that before 2016, there was no major change in Internet usage, but it started to increase significantly afterwards.</p>
+            </div>
+        </div>
+        <div class="pure-u-1-1">
+            <div id="vis5"  class="vis-container"></div>
+        </div>
+    </div>
+    <article>
+        <h2>Fixed broadband subscriptions and the mobile cellular subscriptions</h2>
+        <p>In this section, we will present the research on fixed broadband subscriptions and the mobile cellular subscriptions. It can be seen that although Internet technology is advancing at a high speed, the utilization rate of fixed broadband in most countries is still in the low level, and it is mainly concentrated in Europe And Asia. Mobile cellular usage is higher than fixed broadband</p>
+        
+    </article>
+
+
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="vis1"  class="vis-container"></div>
+        </div>
+    
+        <div class="pure-u-1-2">
+            <div id="vis2"  class="vis-container"></div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="vis11"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="vis21"  class="vis-container"></div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div id="vis12"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="vis22"  class="vis-container"></div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <div class="description description-left">
+                <h2>The number of internet users per country and Percentage of individuals using the Internet</h2>
+                <p><strong>Number of internet users</strong> </p>
+                <p>Because of the large population base, the number of people using the Internet in Asia is larger than that in other continents.</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis31"  class="vis-container"></div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis3"  class="vis-container"></div>
+        </div>
+    </div>
+    <article>
+       <p><strong>Percentage of individuals using the Internet</strong></p> 
+    
+        <p>Now that we are focusing on the percentage of individuals using the Internet, we can see that the Internet usage rate of individuals in Europe is still higher than that in other regions.</p>
+        
+    </article>
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis41"  class="vis-container"></div>
+        </div>
+    </div>
+
+  <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis4"  class="vis-container"></div>
+        </div>
+    </div>
+    
+
+
+</div> <!-- end page -->
+
+<script type="text/javascript">
+    var specVis1 = "js/internet_1.vg.json";
+    var specVis11 = "js/internet_1_1.vg.json";
+    var specVis12 = "js/internet_1_2.vg.json";
+    var specVis2 = "js/internet_2.vg.json";
+    var specVis21 = "js/internet_2_1.vg.json";
+    var specVis22 = "js/internet_2_2.vg.json";
+    var specVis3 = "js/internet_3.vg.json";
+    var specVis31 = "js/internet_3_1.vg.json";
+    var specVis4 = "js/internet_4.vg.json";
+    var specVis41 = "js/internet_4_1.vg.json";
+    var specVis5 = "js/internet_5.vg.json";
+
+    vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis11', specVis11, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis12', specVis12, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis21', specVis21, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis22', specVis22, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    // vegaEmbed('#vis31', specVis31, {"actions": false}).then(function(result) {
+    //     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    // }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    // vegaEmbed('#vis41', specVis41, {"actions": false}).then(function(result) {
+    //     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    // }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis41', specVis41, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis31', specVis31, {"actions": false}).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+
+</script>
+</body>
+</html>
