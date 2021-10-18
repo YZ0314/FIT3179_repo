@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Individuals using the Internet per of population",
+  "width": 650,
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/zmingpan/test/master/js/ne_110m_admin_0_countries.topojson",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/zmingpan/test/master/data/number-of-internet-users-by-country.csv"
+        },
+        "key": "Entity",
+        "fields": ["Number_of_internet_users_OWID_based_on_WB_and_UN","Year"]
+      }
+    },
+    {"calculate": "datum.Number_of_internet_users_OWID_based_on_WB_and_UN", "as": "Number_of_internet_users_OWID_based_on_WB_and_UN"}
+  ],
+  "mark": "arc",
+  "encoding": {
+    "theta": {"field": "Number_of_internet_users_OWID_based_on_WB_and_UN", "type": "quantitative"},
+    "color": {"field": "properties.CONTINENT", "type": "nominal"}
+  }
+}
