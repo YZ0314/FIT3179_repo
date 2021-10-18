@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Individuals using the Internet per of population",
+  "title": "Percentage of mobile cellular used of the world",
   "width": 300,
   "height": 200,
   "data": {

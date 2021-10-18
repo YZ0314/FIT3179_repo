@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 500,
+  "width": 650,
   "height": 300,
   "title": "Individuals using the Internet per of population",
   "projection": {"type": "equalEarth"},

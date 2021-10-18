@@ -32,14 +32,14 @@
       }
     },
     {
-      "name": "Years",
-      "value": 2019,
+      "name": "per",
+      "value": 0,
       "bind": {
         "input": "range",
-        "min": 2008,
-        "max": 2019,
+        "min": 0,
+        "max": 50,
         "step": 1,
-        "name": "Years : "
+        "name": "Percent : "
       }
     }
   ],
@@ -60,7 +60,7 @@
       }
     },
     {"calculate": "datum.Fixed_broadband_subscriptions_per_100_people", "as": "broadband_sub"},
-    {"filter":"datum.Year == Years"}
+    {"filter":"datum.broadband_sub > per"}
   ],
   "projection": {"type": {"expr": "projection"}},
   "mark": {"type": "geoshape","stroke": "white"},

@@ -32,14 +32,14 @@
       }
     },
     {
-      "name": "Years",
-      "value": 2019,
+      "name": "per",
+      "value": 0,
       "bind": {
         "input": "range",
-        "min": 1988,
-        "max": 2019,
+        "min": 0,
+        "max": 200,
         "step": 1,
-        "name": "Years : "
+        "name": "Percent : "
       }
     }
   ],
@@ -60,7 +60,7 @@
       }
     },
     {"calculate": "datum.Mobile_cellular_subscriptions_per_100_people", "as": "Mobile_cellular_sub"},
-    {"filter":"datum.Year == Years"}
+    {"filter":"datum.Mobile_cellular_sub > per"}
   ],
   "projection": {"type": {"expr": "projection"}},
   "mark": {"type": "geoshape","stroke": "white"},
