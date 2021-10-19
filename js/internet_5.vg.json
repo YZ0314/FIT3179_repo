@@ -4,7 +4,7 @@
   "width": 650,
   "height": 500,
   "data": {
-    "url": "https://raw.githubusercontent.com/zmingpan/test/master/js/ne_110m_admin_0_countries.topojson",
+    "url": "https://raw.githubusercontent.com/YZ0314/FIT3179_repo/7c1d8fac80781a97caace802ed2adb78efe1e137/js/ne_110m_admin_0_countries.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "transform": [
@@ -12,7 +12,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/zmingpan/test/master/data/broadband-penetration-by-country.csv"
+          "url": "https://raw.githubusercontent.com/YZ0314/FIT3179_repo/main/data/broadband-penetration-by-country.csv"
         },
         "key": "Entity",
         "fields": ["Fixed_broadband_subscriptions_per_100_people","Year"]
@@ -22,7 +22,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/zmingpan/test/master/data/mobile-cellular-subscriptions-per-100-people.csv"
+          "url": "https://raw.githubusercontent.com/YZ0314/FIT3179_repo/main/data/mobile-cellular-subscriptions-per-100-people.csv"
         },
         "key": "Entity",
         "fields": ["Mobile_cellular_subscriptions_per_100_people","Year"]
@@ -32,7 +32,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/zmingpan/test/master/data/number-of-internet-users-by-country.csv"
+          "url": "https://raw.githubusercontent.com/YZ0314/FIT3179_repo/main/data/number-of-internet-users-by-country.csv"
         },
         "key": "Entity",
         "fields": ["Number_of_internet_users_OWID_based_on_WB_and_UN","Year"]
@@ -42,7 +42,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/zmingpan/test/master/data/share-of-individuals-using-the-internet.csv"
+          "url": "https://raw.githubusercontent.com/YZ0314/FIT3179_repo/main/data/share-of-individuals-using-the-internet.csv"
         },
         "key": "Entity",
         "fields": ["Individuals_using_the_Internet_per_of_population","Year"]
